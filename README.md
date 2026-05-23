@@ -1,6 +1,14 @@
 # shouldtest
 
-Skip expensive CI test jobs when a pull request does not touch the dependency closure of a Go package.
+ShouldTest helps avoid big Golang tests (itests). 
+
+It uses shouldtest.json files per folder to indicate any folders
+that may need considering, then uses Go tooling to quickly locate if any
+dependencies are in the change set. 
+
+A top-level <repo>/.github/shouldtest.json spells out repo-wide configs. 
+
+Want non-GithubCI? Send a PR.
 
 ## Usage
 
